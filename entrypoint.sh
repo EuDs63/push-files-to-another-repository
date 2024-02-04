@@ -30,7 +30,7 @@ git config --global user.name "$COMMIT_USERNAME"
 # Remove git directory if it exists to prevent errors
 rm -rf .git
 
-git clone "https://github.com/$GITHUB_REPOSITORY.git" repo
+git clone "https://$API_TOKEN_GITHUB@github.com/$GITHUB_REPOSITORY.git" repo
 
 cd repo
 ls -la
