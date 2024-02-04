@@ -44,7 +44,6 @@ ls -la "$CLONE_DIRECTORY"
 echo
 echo "##### Copying contents to git repo #####"
 mkdir -p "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
-#cd "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
 for file in $SOURCE_FILES; do
     # 获取文件的相对路径
     relative_path=$(dirname "$file")
