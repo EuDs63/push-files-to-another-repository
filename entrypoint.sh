@@ -44,14 +44,14 @@ ls -la "$CLONE_DIRECTORY"
 echo
 echo "##### Copying contents to git repo #####"
 mkdir -p "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
-cd "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
+#cd "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
 for file in $SOURCE_FILES; do
     # 获取文件的相对路径
     relative_path=$(dirname "$file")
     # 创建相应的目录结构
-    mkdir -p "$relative_path"
+    mkdir -p "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY/$relative_path"
     # 复制文件，保留相对路径
-    cp -rvf "$file" "$relative_path/"
+    cp -rvf "$file" "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY/$relative_path/"
 done
 cd "$CLONE_DIRECTORY"
 
